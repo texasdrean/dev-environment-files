@@ -28,21 +28,40 @@ return packer.startup(function(use)
     use("wbthomason/packer.nvim")       -- packer itself
     use("nvim-lua/plenary.nvim")        -- lua functions that many plugins use
 
-    use("sainnhe/gruvbox-material")     -- preferred colorscheme
+    -- colorscheme
+    use("sainnhe/gruvbox-material")     
 
-    use("numToStr/Comment.nvim")        -- comment lines 
+    -- comment lines
+    use("numToStr/Comment.nvim")
 
-    use("nvim-tree/nvim-tree.lua")      -- file explorer
-    use("nvim-tree/nvim-web-devicons")  -- devicons
+    -- file explorer
+    use("nvim-tree/nvim-tree.lua")
 
-    use("nvim-lualine/lualine.nvim")    -- statusline
+    -- vs-code like icons
+    use("nvim-tree/nvim-web-devicons")
+
+    -- statusline
+    use("nvim-lualine/lualine.nvim")
+
+    -- autocompletion
+    use("hrsh7th/nvim-cmp")
+    use("hrsh7th/cmp-buffer")           -- allow nvim-cmp to recommend text from the current buffer (source)
+    use("hrsh7th/cmp-path")             -- allow nvim-cmp to recommend directories or files from the current buffer (source)
+
+    -- snippets
+    use("L3MON4D3/LuaSnip")             -- snippet engin
+    use("saadparwaiz1/cmp_luasnip")     -- allow nvim-cmp to show snippets on autocompletion
+    use("rafamadriz/friendly-snippets") -- useful snippets
 
 
+    -- fuzzy finding
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
     -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })   -- dependency for better sorting performance
+    use("BurntSushi/ripgrep")                                           -- required to live_grep to work on telescope
 
     if packer_bootstrap then
         require("packer").sync()
