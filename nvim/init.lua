@@ -1,0 +1,8 @@
+require("texasdrean.plugins-setup")
+require("texasdrean.core.options")
+require("texasdrean.core.keymaps")
+require("texasdrean.core.colorscheme")
+require("texasdrean.plugins.telescope")
+require("texasdrean.plugins.comment")
+require("texasdrean.plugins.nvim-tree")
+require("texasdrean.plugins.lualine")
