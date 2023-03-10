@@ -81,6 +81,9 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
+	-- git signs plugin
+	use("lewis6991/gitsigns.nvim")
+
 	-- fuzzy finding
 	use({
 		"nvim-telescope/telescope.nvim",
