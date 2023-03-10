@@ -2,7 +2,7 @@ local opt = vim.opt
 
 -- :help option-list to see all available options
 
--- General 
+-- General
 -- Line numbers
 opt.number = true
 opt.relativenumber = true
@@ -37,8 +37,6 @@ opt.clipboard:append("unnamedplus")
 -- Split windows
 opt.splitright = true
 opt.splitbelow = true
-
-
 
 -- ON MINUTE 10:20
 -- https://www.youtube.com/watch?v=vdn_pKJUda8

@@ -2,7 +2,4 @@
 
 ### To be created
 
-
-
-
-inpired by [josean](https://github.com/josean-dev) & docs
+highly inpired by [josean](https://github.com/josean-dev) & docs

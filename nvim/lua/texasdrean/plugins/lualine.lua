@@ -1,6 +1,6 @@
-local status, lualine = pcall(require,  "lualine")
+local status, lualine = pcall(require, "lualine")
 if not status then
-    return
+	return
 end
 
 local lualine_nightfly = require("lualine.themes.nightfly")
