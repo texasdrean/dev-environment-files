@@ -17,17 +17,24 @@ keymap.set("n", "<leader>+", "<C-a>") -- increment a number
 keymap.set("n", "<leader>-", "<C-x>") -- decrement a number
 
 -- split windows
-keymap.set("n", "<leader>wv", "<C-w>v") -- split window verticaly
-keymap.set("n", "<leader>wh", "<C-w>s") -- split window horizontaly
-keymap.set("n", "<leader>we", "<C-w>=") -- make split windows equal width
-keymap.set("n", "<leader>wx", ":close<CR>") -- close current splited window
+keymap.set("n", "<leader>sv", "<C-w>v") -- split window verticaly
+keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontaly
+keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width
+keymap.set("n", "<leader>sx", ":close<CR>") -- close current splited window
 
 keymap.set("n", "<leader>wl", "<C-w>h") -- move to the right window
 keymap.set("n", "<leader>wr", "<C-w>l") -- move to the left window
 keymap.set("n", "<leader>wd", "<C-w>j") -- move to the window up
 keymap.set("n", "<leader>wu", "<C-w>k") -- move to the window below
 
-keymap.set("n", "<leader>to", ":tabnew<CR>") -- move to the window below
+keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
+keymap.set("n", "<leader>tx", ":tabnew<CR>") -- close current tab
+keymap.set("n", "<leader>tn", ":tabnew<CR>") -- go to next tab
+keymap.set("n", "<leader>tp", ":tabnew<CR>") -- go to previous tab
+
+-- plugin keymaps
+-- vim-maximizer
+keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- go to previous tab
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files on current working directory, respects .gitignore
