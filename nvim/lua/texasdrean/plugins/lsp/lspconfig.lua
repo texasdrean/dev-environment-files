@@ -99,6 +99,32 @@ lspconfig["psalm"].setup({
 	on_attach = on_attach,
 })
 
+-- configure python server
+lspconfig["jedi_language_server"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+lspconfig["pyre"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+lspconfig["pyright"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+lspconfig["sourcery"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+lspconfig["pylsp"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+lspconfig["ruff_lsp"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 -- configure lua server (with special settings)
 lspconfig["lua_ls"].setup({
 	capabilities = capabilities,
