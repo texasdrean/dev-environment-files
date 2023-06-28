@@ -29,7 +29,9 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
 	-- colorscheme
-	use("sainnhe/gruvbox-material")
+	-- use("sainnhe/gruvbox-material")
+	-- use("folke/tokyonight.nvim")
+	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	-- tmux & split window navigation
 	use("christoomey/vim-tmux-navigator")
@@ -57,6 +59,13 @@ return packer.startup(function(use)
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-buffer") -- allow nvim-cmp to recommend text from the current buffer (source)
 	use("hrsh7th/cmp-path") -- allow nvim-cmp to recommend directories or files from the current buffer (source)
+	use({ "hrsh7th/cmp-cmdline" }) -- allow nvim-cmp to recommend commands on command line from the current buffer (source)
+
+	use({ "elixir-tools/elixir-tools.nvim", requires = { "nvim-lua/plenary.nvim" } })
+
+	-- snippet engine
+	use({ "hrsh7th/vim-vsnip" })
+	use({ "hrsh7th/cmp-vsnip" })
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engin
@@ -70,6 +79,7 @@ return packer.startup(function(use)
 	-- configuring the lsp servers
 	use("neovim/nvim-lspconfig") -- easily configure language servers
 	use("hrsh7th/cmp-nvim-lsp") -- autocompletion
+
 	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion

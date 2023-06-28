@@ -8,4 +8,8 @@ Install TPM (Tmux Plugin Manager)
 
 <code> git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm </code>
 
+Install Composer
+
+<code> brew install composer </code>
+
 inpired by [josean](https://github.com/josean-dev) & docs

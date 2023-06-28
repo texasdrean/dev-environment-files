@@ -48,5 +48,6 @@ mason_null_ls.setup({
 		"phpcbf",
 		"phpcsfixer",
 		"flake8",
+		"black",
 	},
 })

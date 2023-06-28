@@ -54,37 +54,31 @@ for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
-
 -- configure html server
 lspconfig["html"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-
 -- configure tsserver server
 lspconfig["tsserver"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-
 -- configure css server
 lspconfig["cssls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-
 -- configure bash server
 lspconfig["bashls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-
 -- configure svelte server
 lspconfig["svelte"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-
 -- configure php server
 lspconfig["intelephense"].setup({
 	capabilities = capabilities,
@@ -98,31 +92,16 @@ lspconfig["psalm"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-
 -- configure python server
-lspconfig["jedi_language_server"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-lspconfig["pyre"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
 lspconfig["pyright"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-lspconfig["sourcery"].setup({
+-- configure elixir server
+lspconfig["elixirls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-})
-lspconfig["pylsp"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-lspconfig["ruff_lsp"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
+	cmd = { "/Users/texasdrean/.config/nvim/languages/elixir-ls/language_server.sh" },
 })
 
 -- configure lua server (with special settings)
